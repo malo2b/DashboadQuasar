@@ -1,9 +1,9 @@
 <template>
   <q-page class="container">
-    <div class="column" style="height: 150px">
-      <div class=".col-auto .col-md-6"><ApexRadialBarPourcentConfinment></ApexRadialBarPourcentConfinment></div>
-      <div class=".col-auto .col-md-6"><ApexColumnCovidStat></ApexColumnCovidStat></div>
-      <div class=".col-auto .col-md-6"><ApexLineTemperatureEvolution></ApexLineTemperatureEvolution></div>
+    <div class="row">
+      <div class="charts"><ApexRadialBarPourcentConfinment></ApexRadialBarPourcentConfinment></div>
+      <div class="charts"><ApexColumnCovidStat></ApexColumnCovidStat></div>
+      <div class="charts"><ApexLineTemperatureEvolution></ApexLineTemperatureEvolution></div>
     </div>
   </q-page>
 </template>
@@ -24,11 +24,14 @@ export default {
 </script>
 
 <style>
-.column > div {
-  padding: 15px 15px;
-  flex-wrap: wrap;
+.charts {
+  padding: 15px 7.5px;
   width: 33%;
-  justify-content: start;
+  height: 500px;
+  min-width: 420px;
+  max-width: 100%;
+  flex-wrap: wrap;
+  flex-grow: 3;
 }
 
 </style>
